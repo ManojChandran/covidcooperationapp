@@ -5,3 +5,5 @@ Living with covid is new normal, biggest challenge is tracking the infected and 
 # Reference 
 
 https://github.com/itzpradip/react-navigation-v5-mix
+
+https://docs.amplify.aws/start/q/integration/react-native
