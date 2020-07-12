@@ -4,7 +4,7 @@ Living with covid is new normal, biggest challenge is tracking the infected and 
 
 # ENV setup steps
 
-1) Set up Amplify
+1) CD in the project folder, Set up Amplify
 ```
 $ amplify init
 ? Enter a name for the project: rnamplify
@@ -32,9 +32,22 @@ $ amplify add auth
 ```
 4) Deploy the authentication function
 ```
-amplify push
+$ amplify push
 ```
-
+5) Open up a new terminal and start the react native
+```
+$ npm install
+```
+6) Open up a new terminal and start the react native
+```
+$ npx react-native start
+```
+7) Open project in Visual studio and start app
+```
+$ npx reat-native run-android 
+OR 
+$ npx react-native run-ios
+```
 # Reference 
 
 https://github.com/itzpradip/react-navigation-v5-mix
