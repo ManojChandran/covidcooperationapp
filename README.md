@@ -21,7 +21,7 @@ $ amplify init
 ```
 2) Install dependencies
 ```
-npm install aws-amplify aws-amplify-react-native amazon-cognito-identity-js @react-native-community/netinfo
+npm install 
 ```
 3) Create authentication service
 ```
@@ -36,15 +36,11 @@ $ amplify push
 ```
 5) Open up a new terminal and start the react native
 ```
-$ npm install
-```
-6) Open up a new terminal and start the react native
-```
 $ npx react-native start
 ```
-7) Open project in Visual studio and start app
+6) Open project in Visual studio and start app
 ```
-$ npx reat-native run-android 
+$ npx react-native run-android 
 OR 
 $ npx react-native run-ios
 ```
@@ -53,3 +49,5 @@ $ npx react-native run-ios
 https://github.com/itzpradip/react-navigation-v5-mix
 
 https://docs.amplify.aws/start/q/integration/react-native
+
+https://github.com/albertoaa/rn_aws_cognito_demo/blob/custom_layout/App.js
