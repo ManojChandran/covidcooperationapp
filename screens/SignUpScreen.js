@@ -25,7 +25,6 @@ Amplify.configure({
 const SignInScreen = ({navigation}) => {
 
     const [data, setData] = React.useState({
-        username: '',
         useremail: '',
         password: '',
         confirm_password: '',
@@ -38,29 +37,14 @@ const SignInScreen = ({navigation}) => {
         if( val.length !== 0 ) {
             setData({
                 ...data,
-                username: val,
+                useremail: val,
                 check_textInputChange: true
             });
         } else {
             setData({
                 ...data,
-                username: val,
+                useremail: val,
                 check_textInputChange: false
-            });
-        }
-    }
-    const emailInputChange = (val) => {
-        if( val.length !== 0 ) {
-            setData({
-                ...data,
-                useremail: val,
-                check_emailInputChange: true
-            });
-        } else {
-            setData({
-                ...data,
-                useremail: val,
-                check_emailInputChange: false
             });
         }
     }
@@ -92,7 +76,7 @@ const SignInScreen = ({navigation}) => {
             confirm_secureTextEntry: !data.confirm_secureTextEntry
         });
     }
-
+    
     return (
       <View style={styles.container}>
           <StatusBar backgroundColor='#009387' barStyle="light-content"/>
@@ -104,7 +88,7 @@ const SignInScreen = ({navigation}) => {
             style={styles.footer}
         >
             <ScrollView>
-            <Text style={styles.text_footer}>User name</Text>
+            <Text style={styles.text_footer}>User email</Text>
             <View style={styles.action}>
                 <FontAwesome 
                     name="user-o"
@@ -112,38 +96,10 @@ const SignInScreen = ({navigation}) => {
                     size={20}
                 />
                 <TextInput 
-                    placeholder="Your Username"
+                    placeholder="Your Email"
                     style={styles.textInput}
                     autoCapitalize="none"
                     onChangeText={(val) => textInputChange(val)}
-                />
-                {data.check_textInputChange ? 
-                <Animatable.View
-                    animation="bounceIn"
-                >
-                    <Feather 
-                        name="check-circle"
-                        color="green"
-                        size={20}
-                    />
-                </Animatable.View>
-                : null}
-            </View>
-
-            <Text style={[styles.text_footer, {
-                marginTop: 35
-            }]}>User email</Text>
-            <View style={styles.action}>
-                <FontAwesome 
-                    name="inbox"
-                    color="#05375a"
-                    size={20}
-                />
-                <TextInput 
-                    placeholder="Your email"
-                    style={styles.textInput}
-                    autoCapitalize="none"
-                    onChangeText={(val) => emailInputChange(val)}
                 />
                 {data.check_textInputChange ? 
                 <Animatable.View
