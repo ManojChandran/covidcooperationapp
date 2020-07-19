@@ -101,6 +101,13 @@ const App = () => {
           userToken: action.token,
           isLoading: false,
         };
+      case 'CONFIRM': 
+        return {
+          ...prevState,
+          userName: action.id,
+          userToken: action.token,
+          isLoading: false,
+        };        
     }
   };
 
@@ -134,6 +141,7 @@ const App = () => {
     signUp: () => {
       // setUserToken('fgkj');
       // setIsLoading(false);
+      dispatch({ type: 'CONFIRM' });
     },
     toggleTheme: () => {
       setIsDarkTheme( isDarkTheme => !isDarkTheme );

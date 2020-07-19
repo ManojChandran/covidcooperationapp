@@ -26,8 +26,10 @@ const SignInScreen = ({navigation}) => {
 
     const [data, setData] = React.useState({
         useremail: '',
+        username: '',
         password: '',
         confirm_password: '',
+        confirm_code: '',
         check_textInputChange: false,
         secureTextEntry: true,
         confirm_secureTextEntry: true,
@@ -76,7 +78,10 @@ const SignInScreen = ({navigation}) => {
             confirm_secureTextEntry: !data.confirm_secureTextEntry
         });
     }
-    
+    const confirmHandle = () => {
+
+        signUp(foundUser);
+    }
     return (
       <View style={styles.container}>
           <StatusBar backgroundColor='#009387' barStyle="light-content"/>
@@ -194,7 +199,7 @@ const SignInScreen = ({navigation}) => {
             <View style={styles.button}>
                 <TouchableOpacity
                     style={styles.signIn}
-                    onPress={() => {}}
+                    onPress={() => navigation.navigate('ConfirmScreen')}
                 >
                 <LinearGradient
                     colors={['#08d4c4', '#01ab9d']}
@@ -204,19 +209,6 @@ const SignInScreen = ({navigation}) => {
                         color:'#fff'
                     }]}>Sign Up</Text>
                 </LinearGradient>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                    onPress={() => navigation.goBack()}
-                    style={[styles.signIn, {
-                        borderColor: '#009387',
-                        borderWidth: 1,
-                        marginTop: 15
-                    }]}
-                >
-                    <Text style={[styles.textSign, {
-                        color: '#009387'
-                    }]}>Sign In</Text>
                 </TouchableOpacity>
             </View>
             </ScrollView>
